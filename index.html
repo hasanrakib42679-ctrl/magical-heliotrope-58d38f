@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AS ANAMUL V1 • Admin</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+<section id="login" class="login">
+  <h1>AS ANAMUL V1</h1><h2>PRIVATE ADMIN PANEL</h2>
+  <input id="pass" type="password" placeholder="Admin Password">
+  <button id="loginBtn">LOGIN</button><div id="loginMsg"></div>
+</section>
+
+<section id="panel" class="hidden">
+  <header><div><b>AS ANAMUL V1</b><small>ADMIN CONTROL PANEL</small></div><button id="logout">LOGOUT</button></header>
+
+  <div class="box api">
+    <h3>USER API URL</h3>
+    <input id="api" value="https://premiumuserpanel.netlify.app">
+    <button id="saveApi" class="cyan">SAVE API URL</button>
+    <p>এখানে তোমার User Panel-এর Netlify URL দাও। শেষে <b>/.netlify/functions/api</b> লিখবে না।</p>
+  </div>
+
+  <div class="selects">
+    <select id="duration"><option>1</option><option>5</option><option>10</option><option>30</option><option>60</option></select>
+    <select id="unit"><option value="minutes">Minutes</option><option value="hours" selected>Hours</option><option value="days">Days</option></select>
+  </div>
+
+  <button id="generate" class="generate">GENERATE NEW AS_ KEY</button>
+  <button id="reset" class="reset">RESET / REVOKE CURRENT KEY</button>
+
+  <div class="box short">
+    <h3>GET KEY SHORT LINK</h3>
+    <input id="short" value="https://adsfly.in/uhCA">
+    <button id="saveShort" class="green">SAVE SHORT LINK</button>
+    <div id="shortMsg"></div>
+  </div>
+
+  <div class="keycard"><div id="keyView">NO ACTIVE KEY</div><button id="copy">COPY KEY</button><small id="expires"></small></div>
+  <div id="status"></div>
+</section>
+</main>
+<script src="app.js"></script>
+</body></html>
